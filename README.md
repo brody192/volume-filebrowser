@@ -1,3 +1,5 @@
+![](https://i.imgur.com/BI5SaG5.png)
+
 # Volume Filebrowser
 
 The Volume Filebrowser for Railway is a tool designed to access the files stored in a volume. This utility provides a simple and efficient way to retrieve files from the designated volume.
@@ -22,12 +24,14 @@ Follow these steps to deploy and configure the Railway Platform File Access Util
 
 6. **Retrieve Basic Auth Credentials**: The basic authentication credentials will be logged in the deploy logs. Note down these credentials for login purposes.
 
-7. **Access the Utility**: Click on the Railway-provided domain to access the File Access Utility.
+    ![](https://i.imgur.com/8OuhwwV.png)
 
-8. **Download Files**: Once logged in, you can now download your desired files from the volume.
+8. **Access the Utility**: Click on the Railway-provided domain to access the File Access Utility.
 
-9. **Disconnect the Volume**: After downloading the files, disconnect the volume from the File Browser service.
+9. **Download Files**: Once logged in, you can now download your desired files from the volume.
 
-10. **Remount to Original Service**: Finally, mount the volume back to the original service using the original mount path noted earlier.
+10. **Disconnect the Volume**: After downloading the files, disconnect the volume from the File Browser service.
 
-11. **Redeploy the Service**: Allow the service to redeploy, ensuring that the volume is correctly attached.
+11. **Remount to Original Service**: Finally, mount the volume back to the original service using the original mount path noted earlier.
+
+12. **Redeploy the Service**: Allow the service to redeploy, ensuring that the volume is correctly attached.
