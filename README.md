@@ -1,6 +1,6 @@
-# Railway Platform File Access Utility
+# Volume Filebrowser
 
-The Railway Platform File Access Utility is a tool designed to access the files stored in a volume on the railway platform. This utility provides a simple and efficient way to retrieve files from the designated volume.
+The Volume Filebrowser for Railway is a tool designed to access the files stored in a volume. This utility provides a simple and efficient way to retrieve files from the designated volume.
 
 ## This utility offers a single feature:
 
