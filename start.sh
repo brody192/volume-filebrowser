@@ -4,8 +4,8 @@ if test -n "${RAILWAY_VOLUME_MOUNT_PATH-}"; then
   echo volume mount point is set to $RAILWAY_VOLUME_MOUNT_PATH
 else
   echo no volume attached, please attach a volume.
-  echo upon attaching a volume this service will rebuild
-  echo and the login credentials will be available.
+  echo upon attaching a volume let this service rebuild
+  echo and then login credentials will be available.
   exit 0
 fi
 
@@ -22,4 +22,4 @@ echo password: $FILEBROWSER_PSSWD
 
 caddy fmt --overwrite /etc/caddy/Caddyfile
 
-caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
+caddy run --config /etc/caddy/Caddyfile --adapter caddyfile 2>&1
