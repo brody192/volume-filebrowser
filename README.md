@@ -24,7 +24,7 @@ Follow these steps to deploy and configure the Railway Platform File Access Util
 
 6. **Retrieve Basic Auth Credentials**: The basic authentication credentials will be logged in the deploy logs. Note down these credentials for login purposes.
 
-    ![](https://i.imgur.com/8OuhwwV.png)
+    ![](https://i.imgur.com/bMu5su6.png)
 
 8. **Access the Utility**: Click on the Railway-provided domain to access the File Access Utility.
 
