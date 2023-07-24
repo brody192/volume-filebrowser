@@ -1,5 +1,12 @@
 #!/bin/sh
 
+if test -n "${RAILWAY_VOLUME_MOUNT_PATH-}"; then
+  echo "volume mount point is set to <$RAILWAY_VOLUME_MOUNT_PATH>"
+else
+  echo "no volume attached, exiting"
+  exit 0
+fi
+
 FILEBROWSER_USRNAME=$(pwgen -s -0 -a 12 1)
 FILEBROWSER_PSSWD=$(pwgen -s -a 24 1)
 
