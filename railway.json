@@ -1,6 +1,1 @@
-{
-  "$schema": "https://railway.app/railway.schema.json",
-  "deploy": {
-    "restartPolicyType": "NEVER"
-  }
-}
+{"deploy":{"restartPolicyType":"NEVER"}}

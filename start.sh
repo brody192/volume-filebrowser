@@ -1,9 +1,11 @@
 #!/bin/sh
 
 if test -n "${RAILWAY_VOLUME_MOUNT_PATH-}"; then
-  echo "volume mount point is set to <$RAILWAY_VOLUME_MOUNT_PATH>"
+  echo volume mount point is set to $RAILWAY_VOLUME_MOUNT_PATH
 else
-  echo "no volume attached, exiting"
+  echo no volume attached, please attach a volume.
+  echo upon attaching a volume this service will rebuild
+  echo and the login credentials will be available.
   exit 0
 fi
 
