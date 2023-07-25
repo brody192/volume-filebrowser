@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -z "$RAILWAY_VOLUME_MOUNT_PATH" ]; then
+if [ -n "$RAILWAY_VOLUME_MOUNT_PATH" ]; then
   echo volume mount point is set to $RAILWAY_VOLUME_MOUNT_PATH
 else
   echo no volume attached, please attach a volume.
