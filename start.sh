@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if test -n "${RAILWAY_VOLUME_MOUNT_PATH-}"; then
+if [ -n $RAILWAY_VOLUME_MOUNT_PATH ]; then
   echo volume mount point is set to $RAILWAY_VOLUME_MOUNT_PATH
 else
   echo no volume attached, please attach a volume.
@@ -8,6 +8,15 @@ else
   echo and then login credentials will be available.
   exit 0
 fi
+
+# if test -n "${-}"; then
+#   echo volume mount point is set to $RAILWAY_VOLUME_MOUNT_PATH
+# else
+#   echo no volume attached, please attach a volume.
+#   echo upon attaching a volume let this service rebuild
+#   echo and then login credentials will be available.
+#   exit 0
+# fi
 
 echo $FILEBROWSER_USRNAME
 
@@ -18,8 +27,8 @@ FILEBROWSER_PSSWD_HASH=$(caddy hash-password --plaintext $FILEBROWSER_PSSWD)
 
 cp -f template.caddyfile Caddyfile
 
-sed -i "s~{{FILEBROWSER_USRNAME}}~$FILEBROWSER_USRNAME~g" Caddyfile
-sed -i "s~{{FILEBROWSER_PSSWD_HASH}}~$FILEBROWSER_PSSWD_HASH~g" Caddyfile
+sed -i "s~{\$FILEBROWSER_USRNAME}~$FILEBROWSER_USRNAME~g" Caddyfile
+sed -i "s~{\$FILEBROWSER_PSSWD_HASH}~$FILEBROWSER_PSSWD_HASH~g" Caddyfile
 
 echo username: $FILEBROWSER_USRNAME
 echo password: $FILEBROWSER_PSSWD

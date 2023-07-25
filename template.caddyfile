@@ -7,7 +7,7 @@
 
 :{$PORT} {
     basicauth {
-	    {{FILEBROWSER_USRNAME}} {{FILEBROWSER_PSSWD_HASH}}
+	    {$FILEBROWSER_USRNAME} {$FILEBROWSER_PSSWD_HASH}
     }
 
     file_server {
