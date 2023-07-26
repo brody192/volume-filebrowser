@@ -2,10 +2,7 @@
     admin off
     persist_config off
     auto_https off
-    log {
-        output stdout
-        format console
-    }
+    log { format console }
 }
 
 :{$PORT} {
