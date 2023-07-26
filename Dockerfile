@@ -1,8 +1,8 @@
 FROM caddy:2.6.4-alpine
 
-RUN apk add --no-cache pwgen
+RUN caddy add-package github.com/caddyserver/transform-encoder
 
-# COPY ./Caddyfile /etc/caddy/Caddyfile
+RUN apk add --no-cache pwgen
 
 WORKDIR /app
 
