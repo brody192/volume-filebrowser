@@ -2,6 +2,10 @@
     admin off
     persist_config off
     auto_https off
+	storage_clean_interval 0
+	renew_interval 0
+	ocsp_interval 0
+    skip_install_trust on
     log { format console }
 }
 
