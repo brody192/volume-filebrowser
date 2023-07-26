@@ -1,7 +1,7 @@
 {
     auto_https off
     log {
-        format console
+        format transform "{common_log}"
     }
 }
 
