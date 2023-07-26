@@ -1,0 +1,23 @@
+{
+    admin off
+    persist_config off
+    auto_https off
+	storage_clean_interval 0
+	renew_interval 0
+	ocsp_interval 0
+    skip_install_trust on
+    log { format console }
+}
+
+:{$PORT} {
+    basicauth {
+	    {$FILEBROWSER_USRNAME} {$FILEBROWSER_PSSWD_HASH}
+    }
+
+    file_server {
+        root {$RAILWAY_VOLUME_MOUNT_PATH}
+        index nil
+        browse
+        hide lost+found
+    }
+}

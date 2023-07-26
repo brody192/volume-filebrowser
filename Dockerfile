@@ -2,9 +2,9 @@ FROM caddy:2.6.4-alpine
 
 RUN apk add --no-cache pwgen
 
-COPY ./Caddyfile /etc/caddy/Caddyfile
-
 WORKDIR /app
+
+COPY template.caddyfile ./
 
 COPY start.sh ./
 
