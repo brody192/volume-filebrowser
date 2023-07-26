@@ -1,7 +1,11 @@
 {
+    admin off
+    persist_config off
     auto_https off
+    protocols h1
     log {
-        format transform "{common_log}"
+        output stdout
+        format console
     }
 }
 
