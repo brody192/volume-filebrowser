@@ -26,6 +26,6 @@ echo password: $FILEBROWSER_PSSWD
 
 caddy fmt --overwrite Caddyfile
 
-caddy version
+echo caddy version: $(caddy version | cut -d " " -f 1)
 
 caddy run --config Caddyfile --adapter caddyfile 2>&1
