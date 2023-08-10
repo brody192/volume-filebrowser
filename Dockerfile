@@ -34,7 +34,7 @@ FROM base as run
 
 COPY --from=download /usr/bin/pwgen /usr/bin/pwgen
 COPY --from=download /usr/bin/curl /usr/bin/curl
-COPY --from=download /dl/caddy /usr/bin/caddy
+COPY --from=download /download/caddy /usr/bin/caddy
 
 WORKDIR /app
 
