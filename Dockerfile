@@ -1,28 +1,11 @@
-# FROM caddy:2.6.4-alpine
-
-# RUN apk add --no-cache pwgen
-
-# WORKDIR /app
-
-# COPY template.caddyfile ./
-
-# COPY start.sh ./
-
-# RUN chmod +x start.sh
-
-# CMD ["sh", "start.sh"]
-
 FROM alpine:3.18.3 as base
 
 FROM base as download
 
 ARG CADDY_VERSION=2.7.3
 
-RUN apk add --no-cache pwgen curl
-
-# RUN which pwgen
-
-# RUN which curl
+# RUN apk add --no-cache pwgen curl
+RUN apk add --no-cache pwgen
 
 WORKDIR /download
 
@@ -33,7 +16,7 @@ RUN curl "https://github.com/caddyserver/caddy/releases/download/v${CADDY_VERSIO
 FROM base as run
 
 COPY --from=download /usr/bin/pwgen /usr/bin/pwgen
-COPY --from=download /usr/bin/curl /usr/bin/curl
+# COPY --from=download /usr/bin/curl /usr/bin/curl
 COPY --from=download /download/caddy /usr/bin/caddy
 
 WORKDIR /app
