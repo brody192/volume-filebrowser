@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 if [ -n "$RAILWAY_VOLUME_MOUNT_PATH" ]; then
   echo volume mount point is set to $RAILWAY_VOLUME_MOUNT_PATH
 else
@@ -23,5 +25,7 @@ echo username: $FILEBROWSER_USRNAME
 echo password: $FILEBROWSER_PSSWD
 
 caddy fmt --overwrite Caddyfile
+
+echo caddy version: $(caddy version | cut -d " " -f 1)
 
 caddy run --config Caddyfile --adapter caddyfile 2>&1
