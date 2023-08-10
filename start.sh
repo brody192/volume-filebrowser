@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 if [ -n "$RAILWAY_VOLUME_MOUNT_PATH" ]; then
   echo volume mount point is set to $RAILWAY_VOLUME_MOUNT_PATH
 else
