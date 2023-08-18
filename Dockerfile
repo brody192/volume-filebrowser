@@ -2,7 +2,7 @@ FROM alpine:3.18.3 as base
 
 FROM base as download
 
-ARG CADDY_VERSION=2.7.3
+ARG CADDY_VERSION=2.7.4
 
 RUN apk add --no-cache pwgen curl
 
