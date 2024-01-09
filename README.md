@@ -26,9 +26,7 @@ Follow these steps to deploy this template service:
 
 5. **Mount the Volume to Volume File Browser**: Click on the newly disconnected volume, then click `Mount` and select `Volume File Browser` as the destination, and use `/data` as the mount point. Wait for the redeployment process to complete.
 
-6. **Retrieve Basic Auth Credentials**: The basic authentication credentials will be logged in the deploy logs.
-
-    ![](https://i.imgur.com/bMu5su6.png)
+6. **Retrieve Basic Auth Credentials**: The basic authentication credentials can be found in the service variables.
 
 8. **Access the Utility**: Click on the Railway-provided domain to access the File Access Utility, and login with the auto-generated credentials.
 
